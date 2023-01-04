@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/dropzone.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="site-header sticky-top py-1 bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+      <div class="btn-group">
+        <button type="button" id="username" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="cart.html">Ver mi carrito</a>
+          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" id="close" href="index.html">Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div>
+    <h4 class="text-center p-3"> Carrito de compras  </h4>
+  </div>
+  <div id="cartProductos">
+   
+
+  </div>
+  <div>
+  <h5 class="mb-1">Envio: </h5>
+  
+  <div class="custom-control custom-radio">
+    <input id="standardradio" name="publicationType" type="radio" class="custom-control-input" required="">
+    <label class="custom-control-label" for="standardradio">Estandar(% 5)</label>
+    </div>
+
+  <div class="custom-control custom-radio">
+<input id="goldradio" name="publicationType" type="radio" class="custom-control-input"  required="">
+<label class="custom-control-label" for="goldradio">Rapido(% 7)</label>
+</div>
+
+
+
+<div class="custom-control custom-radio">
+  <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input" required="">
+  <label class="custom-control-label" for="premiumradio">Ultra rapido(% 15)</label>
+  </div>
+
+  <span id="subtotalGeneral"></span>
+<div>
+
+</div>
+
+  <br>
+
+<center>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Seleccionar todo
+  </button>
+</center>
+
+
+
+<div class= "list-group-item list-group-item-action">
+  
+  </div>
+       
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Datos de Pago</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    
+  
+    
+    <div class="modal-body" id="totalmodal"></div>
+      
+  <div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+  <label class="custom-control-label" for="defaultUnchecked">Tarjeta de Crédito</label>
+  </div>
+  
+  
+  <div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+  <label class="custom-control-label" for="defaultChecked">Depósito Bancario</label>
+  </div>
+  <hr>
+      <form class="needs-validation" novalidate>
+  <div class="form-row">
+  <div class="col-md- mb-3">
+    <label for="validationCustom01">Nombre</label>
+    <input type="text" class="form-control" id="validationCustom01" value="" required>
+    <div class="valid-feedback">
+      
+    </div>
+      <div class="invalid-feedback">
+      Este campo es obligatorio.
+    </div>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="validationCustom02">Cedula de identidad</label>
+    <input type="number" class="form-control" id="validationCustom02"  min="" max="" value="" required>
+    <div class="valid-feedback">
+      
+    </div>
+      <div class="invalid-feedback">
+      Este campo es obligatorio.
+    </div>
+  </div>
+  </div>
+  <div class="form-row">
+  <div class="col-md-6 mb-3">
+    <label for="validationCustom03">País</label>
+    <input type="text" class="form-control" id="validationCustom03" required>
+    <div class="valid-feedback">
+      
+    </div>
+      <div class="invalid-feedback">
+      Este campo es obligatorio.
+    </div>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="validationCustom04">Nùmero de Tarjeta</label>
+    <input type="number" class="form-control" id="validationCustom04" required>
+    <div class="valid-feedback">
+      
+    </div>
+     <div class="invalid-feedback">
+      Este campo es obligatorio.
+    </div>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="validationCustom05">Cantidad de Cuotas</label>
+    <input type="number" class="form-control" id="validationCustom05" required>
+    <div class="valid-feedback">
+      
+    </div>
+      <div class="invalid-feedback">
+      Este campo es obligatorio.
+    </div>
+  </div>
+  </div>
+  <div class="form-group">
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+    <label class="form-check-label" for="invalidCheck">
+      Acepto los terminos de privacidad
+    </label>
+    <div class="invalid-feedback">
+      Debe estar conforme con los terminos antes de enviar.
+    </div>
+  </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Enviar</button>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+  </form>
+  
+    </div>
+  </div>
+</div>
+  
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dropzone.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>
